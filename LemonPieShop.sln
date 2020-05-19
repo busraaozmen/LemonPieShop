@@ -1,0 +1,25 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.30011.22
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "LemonPieShop", "LemonPieShop\LemonPieShop.csproj", "{FEE95C1E-998D-4104-B4D2-DBE450FAB337}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{FEE95C1E-998D-4104-B4D2-DBE450FAB337}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{FEE95C1E-998D-4104-B4D2-DBE450FAB337}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{FEE95C1E-998D-4104-B4D2-DBE450FAB337}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{FEE95C1E-998D-4104-B4D2-DBE450FAB337}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {FE0094C6-1813-4D00-B55F-6419A5115251}
+	EndGlobalSection
+EndGlobal
