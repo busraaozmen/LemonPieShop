@@ -2,6 +2,7 @@ using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
+using BethanysPieShop.Models;
 using LemonPieShop.Models;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
@@ -30,6 +31,9 @@ namespace LemonPieShop
 
             services.AddScoped<IPieRepository, PieRepository>(); //  pasta deposu
             services.AddScoped<ICategoriesRepository, CategoryRepository>(); // kategori deposu
+            services.AddScoped<ShoppingCart>(sp => ShoppingCart.GetCart(sp));
+            services.AddHttpContextAccessor();
+            services.AddSession();
             services.AddControllersWithViews();// MVC kullanýmý ýcýn yazdýk.
         }
 
@@ -43,6 +47,7 @@ namespace LemonPieShop
 
             app.UseHttpsRedirection();
             app.UseStaticFiles();
+            app.UseSession();
 
             app.UseRouting();
 
