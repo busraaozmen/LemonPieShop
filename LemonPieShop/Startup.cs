@@ -7,6 +7,7 @@ using LemonPieShop.Models;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.AspNetCore.Http;
+using Microsoft.AspNetCore.Identity;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
@@ -29,6 +30,8 @@ namespace LemonPieShop
             services.AddDbContext<AppDbContext>(options =>
                      options.UseSqlServer(Configuration.GetConnectionString("DefaultConnection")));
 
+            services.AddDefaultIdentity<IdentityUser>().AddEntityFrameworkStores<AppDbContext>();
+
             services.AddScoped<IPieRepository, PieRepository>(); //  pasta deposu
             services.AddScoped<ICategoriesRepository, CategoryRepository>(); // kategori deposu
             services.AddScoped<IOrderRepository, OrderRepository>();  //Order deposu
@@ -36,6 +39,7 @@ namespace LemonPieShop
             services.AddHttpContextAccessor();
             services.AddSession();
             services.AddControllersWithViews();// MVC kullanýmý ýcýn yazdýk.
+            services.AddRazorPages();
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
@@ -51,6 +55,8 @@ namespace LemonPieShop
             app.UseSession();
 
             app.UseRouting();
+            app.UseAuthentication();
+            app.UseAuthorization();
 
             app.UseEndpoints(endpoints =>
             {
@@ -59,6 +65,8 @@ namespace LemonPieShop
                  name: "default",
                  pattern: "{controller=Home}/{action=Index}/{id?}"
                  );
+                endpoints.MapRazorPages();
+                
 
             });
         }

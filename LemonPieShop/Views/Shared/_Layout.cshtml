@@ -36,6 +36,7 @@
                 </li>
 
                 @await Component.InvokeAsync("ShoppingCartSummary")
+                <partial name="_LoginPartial" />
 
             </ul>
         </div>
@@ -67,8 +68,6 @@
     </environment>
 
     @RenderSection("scripts", required: false)
-
-
 
 
 </body>

@@ -103,8 +103,6 @@ namespace BethanysPieShop.Models
             _appDbContext.SaveChanges();
         }
 
-
-
         public decimal GetShoppingCartTotal()
         {
             var total = _appDbContext.ShoppingCartItems.Where(c => c.ShoppingCartId == ShoppingCartId)
