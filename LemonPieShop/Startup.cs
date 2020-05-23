@@ -31,6 +31,7 @@ namespace LemonPieShop
 
             services.AddScoped<IPieRepository, PieRepository>(); //  pasta deposu
             services.AddScoped<ICategoriesRepository, CategoryRepository>(); // kategori deposu
+            services.AddScoped<IOrderRepository, OrderRepository>();  //Order deposu
             services.AddScoped<ShoppingCart>(sp => ShoppingCart.GetCart(sp));
             services.AddHttpContextAccessor();
             services.AddSession();
