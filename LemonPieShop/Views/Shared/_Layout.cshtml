@@ -27,12 +27,12 @@
             <!-- Links -->
             <ul class="navbar-nav mr-auto">
                 <li class="nav-item ">
-                    <a class="nav-link" asp-controller="Home" asp-action="Index"><em>Home</em></a>
+                    <a class="nav-link font-weight-bolder" asp-controller="Home" asp-action="Index"><em>Home</em></a>
                 </li>
                 @await Component.InvokeAsync("CategoryMenu")
 
                 <li class="nav-item ">
-                    <a class="nav-link" asp-controller="Contact" asp-action="Index"><em>Contact</em></a>
+                    <a class="nav-link font-weight-bolder" asp-controller="Contact" asp-action="Index"><em>Contact</em></a>
                 </li>
 
                 @await Component.InvokeAsync("ShoppingCartSummary")
@@ -48,7 +48,7 @@
         <div class="row">
             <div class="col-md-3">
                 <p class="lead">
-                    <img class="img-fluid" alt="Lemon's Pie Shop" src="~/Images/Lemonlogo.png" />
+                    <img class="img-fluid ml-5" alt="Lemon's Pie Shop" src="~/Images/LemonsPieShopLogo.png" />
                 </p>
             </div>
             <div class="col-md-9">
